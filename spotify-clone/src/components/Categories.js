@@ -26,7 +26,6 @@ const Categories = () => {
 
     return (
 
-
         <div>
             {dataCategories.map(category => (
                 <div className="cardsWrap">

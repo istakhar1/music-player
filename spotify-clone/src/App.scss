@@ -8,9 +8,13 @@ $greenMain:#1db954;
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar{
+  display: none;
+}
 .App {
 height: calc(100vh - 90px);
-background:$greyLight;
+// background:rgb(91,87,115);
+background: linear-gradient(rgb(46, 45, 51),rgba(0,0,0,1));
 display: flex;
 overflow: hidden;
 }
@@ -90,10 +94,13 @@ overflow: hidden;
 }
 
 .musicControls{
+
+
   background: $greyLighter;
   text-align: center;
   height: 90px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   color: white;
@@ -103,7 +110,7 @@ overflow: hidden;
 }
 
 .upperNav{
-  background: #0c0c0c;
+  background: rgb(40, 40, 44);
   height: 56px;
   width: 100%;
   display: flex;
@@ -130,6 +137,8 @@ overflow: hidden;
 
 .cardsWrap{
   padding-bottom: 1.6rem;
+
+
   h2{
     margin-bottom: 0;
     margin-top: 0.5rem;
@@ -142,9 +151,18 @@ overflow: hidden;
   .subtext{
     margin-top: 0.5rem;
     margin-bottom: 1rem;
+    p{
+      margin-top: auto;
+    }
   }
   .card{
-    background: $greyLighter;
+    // transition: 0s background-color;
+    &:hover{
+      cursor: pointer;
+      background-color: $greyLighter ;
+      transition:0.6s ease;
+    }
+    background: $greyLight;
     border-radius: 5px;
     width: 200px;
     height: 270px;
@@ -177,6 +195,7 @@ overflow: hidden;
         letter-spacing: 0.6px;
       }
       span{
+      
         font-size:0.8rem;
         color: $greyText;
        
@@ -202,4 +221,87 @@ overflow: hidden;
   svg{
     margin: auto;
   }
+}
+
+// .music-container{
+//   display: flex;
+//   flex-direction:row;
+//   justify-content:flex-start;
+//   align-items: center;
+// }
+// .img-container{
+//  .titeimg{
+//    padding: 10px;
+//    width:80px;
+//    height: 80px;
+//  }
+// }
+// .fas{
+//   width: 40px;
+//   height: 40px;
+//   fill:white;
+//   color: white;
+//   background: white;
+// }
+.footer{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  bottom:0;
+  width: 97%;
+  padding:20px;
+}
+
+.footer__right * .MuiSlider-root {
+  color: green;
+}
+.footer__left {
+  display: flex;
+  align-items: center;
+  color: white;
+  width: 300px;
+  flex: 0.3;
+}
+
+.footer__green {
+  color: #1ed15e;
+}
+
+.footer__center {
+  flex: 0.4;
+  max-width: 300px;
+  padding: 0 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__icon:hover,
+.footer__green:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
+
+.footer__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex: 0.3;
+}
+
+.footer__albumLogo {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.footer__songInfo > h4 {
+  margin-bottom: 5px;
+}
+
+.footer__songInfo > p {
+  font-size: 12px;
 }

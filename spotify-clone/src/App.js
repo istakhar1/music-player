@@ -1,6 +1,7 @@
 import "./App.scss";
 import Nav from './components/Nav';
 import Main from './components/Main';
+import Player from './components/Player';
 
 const App = () => {
   return (
@@ -9,7 +10,9 @@ const App = () => {
         <Nav/>
         <Main/>
       </div>
-      <div className="musicControls">music controls</div>
+      <div className="musicControls">
+      <Player/>
+      </div>
     </div>
   );
 }
