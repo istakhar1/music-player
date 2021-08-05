@@ -1,18 +1,19 @@
 import React from 'react'
 import Categories  from './Categories'
+import Header from './Header'
 
 const Main=()=>{
     return (
         <div className="main">
           <div className="upperNav">
-              nav bar 
+              <Header/>
           </div>
           <div className="mainContent">
                 <div className="cardsWrap">
                 <h1>Made for you</h1>
                 <p className="subText">Get better recommendations the more you listen.</p>
                     <div className="cardsWrapInner" >
-                        <div className="card">
+                        <div className="card" onClick={alert("clicked")} >
                             <div className="cardImage">
                             <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="Pic 1"/>
                             </div>
@@ -63,5 +64,8 @@ const Main=()=>{
         </div>
     )
 }
+// document.querySelector('.card').addEvevntListener('click',()=>{
+//     alert("cliked");
+// });
 
 export default Main
